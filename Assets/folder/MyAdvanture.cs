@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MyAdvanture : MonoBehaviour
 {
+    //dit geeft alle states weer die in de game zitten
     private enum states
     {
         Start,
@@ -23,7 +24,7 @@ public class MyAdvanture : MonoBehaviour
         eten,
         win
     }
-
+    //currentstate houd bij in welke state de game is
     private states currentstate = states.Start;
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class MyAdvanture : MonoBehaviour
     {
         
     }
-
+    //onUserInput detecteerd wat de user input en stuurt ze vervolgens door naar de juiste input
     void OnUserInput(string input)
     {
         switch (currentstate)
@@ -179,7 +180,7 @@ public class MyAdvanture : MonoBehaviour
                 break;
         }
     }
-    
+    //dit geeft de text door aan de terminal
     void ShowMainMenu()
     {
         Terminal.ClearScreen();
